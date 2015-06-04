@@ -38,8 +38,8 @@ public class PlayerController : MonoBehaviour {
 	//	transform.Translate(Input.acceleration.x * speed, -Input.acceleration.y* speed,0 );
 		Vector3 dir = Vector3.zero;
 
-		dir.x = -Input.acceleration.x;
-		dir.y = -Input.acceleration.y;
+		dir.x = Input.acceleration.x;
+		dir.y = Input.acceleration.y;
 		Vector3 movement = new Vector3(dir.x,0f,dir.y);
 
 		GetComponent<Rigidbody>().AddForce(  movement * speed * Time.deltaTime);
